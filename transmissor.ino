@@ -1,13 +1,5 @@
-/* ========== TRANSMISSOR ===============
-   Autor: Marlon Nardi Walendorff
-   Data: 28/11/2020
-   Projeto: Comunicação entre dois Arduinos sem fio utilizando módulos RF 433Mhz
-*/
- 
-//==== Inclusão de bibliotecas ====//
 #include <VirtualWire.h>
  
-//==== Mapemamento de Hardware e constantes =====//
 #define Size 2
 #define pinButton 3
 #define pinPot A0
@@ -17,14 +9,12 @@
 #define led4 12
 #define led5 13
  
-//===== Variáveis globais ========//
 byte TX_buffer[2];
  
  
 void setup()
 {
   Serial.begin(9600);
-  //Entradas/Saídas digitais
   pinMode(pinButton, INPUT_PULLUP);
 
   pinMode(led1, OUTPUT);
