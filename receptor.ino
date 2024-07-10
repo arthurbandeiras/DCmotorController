@@ -1,19 +1,9 @@
-/* ========== RECEPTOR ===============
-   Autor: Marlon Nardi Walendorff
-   Data: 28/11/2020
-   Projeto: Comunicação entre dois Arduinos sem fio utilizando módulos RF 433Mhz
-*/
- 
-//==== Inclusão de bibliotecas ====//
 #include <VirtualWire.h>             
 
-//==== Mapemamento de Hardware e constantes =====//
 #define pinLEDPot 11
 #define pinLEDButton 9
 #define IN1 3
 
- 
-//===== Variáveis globais ========//
 byte message[VW_MAX_MESSAGE_LEN]; // Um buffer para armazenar as mensagens
 byte messageLength = VW_MAX_MESSAGE_LEN; // Tamanho máximo das mensagens recebidas
 int tensao = 0;
@@ -23,7 +13,6 @@ void setup()
   //Inicia comunicação serialcom velocidade de 9600 BPS
   Serial.begin(9600);
   
-  //Entradas/Saídas digitais
   pinMode(pinLEDPot, OUTPUT);
   pinMode(pinLEDButton, OUTPUT);
   pinMode(IN1, OUTPUT);
@@ -34,7 +23,7 @@ void setup()
 
   digitalWrite(IN1, HIGH);
   
-}//endSetup
+}
  
 void loop()
 {
